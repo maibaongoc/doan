@@ -1,10 +1,10 @@
-/*package com.example.doan.Validator;
+package com.example.doan.Validator;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
-import tranminhduc.demo.Validator.annotation.ValidUsername;
-import tranminhduc.demo.repository.IUserRepository;
+import com.example.doan.Validator.annotation.ValidUsername;
+import com.example.doan.repository.IUserRepository;
 
 public class ValidUsernameValidator implements ConstraintValidator<ValidUsername, String> {
     @Autowired
@@ -16,4 +16,4 @@ public class ValidUsernameValidator implements ConstraintValidator<ValidUsername
             return true;
         return userRepository.findByUsername(username) == null;
     }
-}*/
+}

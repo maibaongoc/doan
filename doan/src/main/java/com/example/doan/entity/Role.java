@@ -1,4 +1,3 @@
-/*
 package com.example.doan.entity;
 
 import jakarta.persistence.*;
@@ -31,4 +30,3 @@ import java.util.Set;
         private Set<User> users = new HashSet<>();
     }
 
-*/

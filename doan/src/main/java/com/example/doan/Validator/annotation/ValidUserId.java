@@ -1,8 +1,8 @@
-/*package com.example.doan.Validator.annotation;
+package com.example.doan.Validator.annotation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
-import tranminhduc.demo.Validator.ValidUserIdValidator;
+import com.example.doan.Validator.ValidUserIdValidator;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -21,4 +21,4 @@ public @interface ValidUserId {
     String message() default "Invalid User ID";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
-}*/
+}

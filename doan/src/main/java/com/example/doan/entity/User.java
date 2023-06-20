@@ -1,18 +1,17 @@
-/*package com.example.doan.entity;*/
+package com.example.doan.entity;
 
-/*import jakarta.persistence.*;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import tranminhduc.demo.Validator.annotation.ValidUsername;
+import com.example.doan.Validator.annotation.ValidUsername;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;*/
+import java.util.Set;
 
 
-/*
 @Data
 @Entity
 @Table(name = "user")
@@ -47,6 +46,5 @@ public class User {
     private Set<Role> roles = new HashSet<>();
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    private List<Book> books = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
 }
-*/

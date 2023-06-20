@@ -1,4 +1,3 @@
-/*
 package com.example.doan.repository;
 
 import jakarta.transaction.Transactional;
@@ -6,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-import tranminhduc.demo.entity.User;
+import com.example.doan.entity.User;
 @Repository
 
 public interface IUserRepository extends JpaRepository<User, Long> {
@@ -25,4 +24,3 @@ public interface IUserRepository extends JpaRepository<User, Long> {
     @Query(value = "SELECT r.name FROM role r INNER JOIN user_role ur ON r.id = ur.role_id WHERE ur.user_id =?1", nativeQuery = true)
     String[] getRolesOfUser(Long userId);
 }
-*/

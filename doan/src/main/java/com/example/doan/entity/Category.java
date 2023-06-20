@@ -1,4 +1,4 @@
-package com.example.doan.model;
+package com.example.doan.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;

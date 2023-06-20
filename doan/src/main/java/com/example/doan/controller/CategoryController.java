@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import com.example.doan.model.Category;
+import com.example.doan.entity.Category;
 import com.example.doan.services.CategoryService;
 
 import java.util.List;
@@ -17,6 +17,7 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+    // xem danh sach category
     @GetMapping
     public String listCategory(Model model) {
         List<Category> category = categoryService.getAllCategories();
@@ -24,13 +25,14 @@ public class CategoryController {
         model.addAttribute("title", "category List");
         return "category/list";
     }
-
+    // Goi form add category
     @GetMapping("/add")
     public String addCategoryForm(Model model){
         model.addAttribute("category", new Category());
 
         return "category/add";
     }
+    // Add category
     @PostMapping("/add")
     public String addBook(@Valid @ModelAttribute("category") Category category, BindingResult result , Model model){
         if(result.hasErrors()){

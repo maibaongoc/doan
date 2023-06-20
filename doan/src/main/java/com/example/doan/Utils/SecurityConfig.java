@@ -1,6 +1,6 @@
-/*package com.example.doan.Utils;*/
-
-/*import org.springframework.context.annotation.Bean;
+package com.example.doan.Utils;
+import com.example.doan.services.CustomUserDetailService;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -10,9 +10,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import tranminhduc.demo.services.CustomUserDetailService;*/
-
-/*@Configuration
+@Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
 
@@ -36,19 +34,24 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf().disable()
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers( "/css/**", "/js/**", "/", "/register", "/error")
+                        .requestMatchers( "/css/**", "/js/**", "/", "/register", "/error","/img/**","/home","/css/**","/fonts/**","/js/**","/screenshot/**","/home/filter","/home/filter2","/home/filter3","/home/filter4","/products/viewproduct/**")
 
                         .permitAll()
 
-                        .requestMatchers( "/books/edit/**", "/books/delete/**")
+                        .requestMatchers( "/products/edit/**", "/products/delete/**")
 
-                       .hasAnyAuthority("ADMIN")
+                        .hasAnyAuthority("ADMIN")
 
-                        .requestMatchers("/books", "/books/add")
+                        .requestMatchers("/products", "/products/add")
+
+                        .hasAnyAuthority("ADMIN")
+
+                        .requestMatchers("/shopping-cart","/shopping-cart/view" ,"/shopping-cart/add/**")
 
                         .hasAnyAuthority("ADMIN","USER")
 
                         .anyRequest().authenticated()
+
 
                 )
                 .logout(logout -> logout.logoutUrl("/logout")
@@ -62,8 +65,7 @@ public class SecurityConfig {
                 )
                 .formLogin(formLogin -> formLogin.loginPage("/login")
                         .loginProcessingUrl("/login")
-                        .defaultSuccessUrl("/")
-
+                        .defaultSuccessUrl("/home")
                         .permitAll()
 
                 )
@@ -75,4 +77,4 @@ public class SecurityConfig {
                         exceptionHandling.accessDeniedPage("/403"))
                 .build();
     }
-}*/
+}

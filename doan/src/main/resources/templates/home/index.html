@@ -14,13 +14,14 @@
             <!-- section title -->
             <div class="col-md-12">
                 <div class="section-title">
-                    <h3 class="title">New Products</h3>
+                    <h3 class="title">Những dòng sản phẩm mới</h3>
                     <div class="section-nav">
                         <ul class="section-tab-nav tab-nav">
-                            <li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Smartphones</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Cameras</a></li>
-                            <li><a data-toggle="tab" href="#tab1">Accessories</a></li>
+                            <li><a th:href="@{/home/filter}">Laptops</a></li>
+                            <li><a th:href="@{/home/filter2}">Smart Phone</a></li>
+                            <li><a th:href="@{/home/filter3}">Cameras</a></li>
+                            <li><a th:href="@{/home/filter4}">Accessories</a></li>
+                            <li><a th:href="@{/home}">All</a></li>
                         </ul>
                     </div>
                 </div>
@@ -34,20 +35,20 @@
                         <div  id="tab1" class="tab-pane active">
                             <div class="products-slick" data-nav="#slick-nav-1">
                                 <!-- product -->
-                                <div class="product">
+                                <div th:each="product : ${listProduct}" class="product">
                                     <div class="product-img">
-                                        <img src="./img/product01.png" alt="">
+                                        <img style="width: 260px; height: 300px" th:src="@{/img/} + ${product.image}" alt=""/>
                                         <div class="product-label">
                                             <span class="sale">-30%</span>
                                             <span class="new">NEW</span>
                                         </div>
                                     </div>
                                     <div  class="product-body">
-                                        <p class="product-category">Category</p>
-                                        <h3 th:text="" class="product-name">
-                                            <a href="#">product name goes here</a></h3>
-                                        <h4 class="product-price">$980.00
-                                            <del class="product-old-price">$990.00</del>
+                                        <p th:text="${product.getCategory().getName()}" class="product-category"></p>
+                                        <h3 th:text="${product.name}" class="product-name">
+
+                                        </h3>
+                                        <h4 th:text="${product.price}" class="product-price">
                                         </h4>
                                         <div class="product-rating">
                                             <i class="fa fa-star"></i>
@@ -64,10 +65,12 @@
                                             <button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span>
                                             </button>
                                         </div>
+                                        <a class="add-to-cart-btn" th:href="@{/products/viewproduct/{id}(id=${product.id})}"> Chi tiết sản phẩm
+                                        </a>
                                     </div>
                                     <div class="add-to-cart">
-                                        <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart
-                                        </button>
+                                        <a class="add-to-cart-btn" th:href="@{/shopping-cart/add/{id}(id=${product.id})}"> Thêm vào giỏ hàng
+                                        </a>
                                     </div>
                                 </div>
                                 <!-- /product -->

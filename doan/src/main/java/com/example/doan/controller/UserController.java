@@ -1,4 +1,3 @@
-/*
 package com.example.doan.controller;
 
 import jakarta.validation.Valid;
@@ -11,8 +10,8 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import tranminhduc.demo.entity.User;
-import tranminhduc.demo.services.UserService;
+import com.example.doan.entity.User;
+import com.example.doan.services.UserService;
 
 import java.util.List;
 
@@ -22,9 +21,7 @@ public class UserController {
     @Autowired
     private UserService userService;
     @GetMapping("/login")
-    public String login() {
-        return "user/login";
-    }
+    public String login() {return "user/login";}
     @GetMapping("/register")
     public String register(Model model) {
         model.addAttribute("user", new User());
@@ -47,4 +44,3 @@ public class UserController {
         return "redirect:/login";
     }
 }
-*/

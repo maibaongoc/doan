@@ -1,4 +1,3 @@
-/*
 package com.example.doan.controller;
 
 import jakarta.servlet.RequestDispatcher;
@@ -18,4 +17,3 @@ public class CustomErrorController implements ErrorController {
         return null;
     }
 }
-*/

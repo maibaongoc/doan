@@ -1,8 +1,8 @@
-/*package com.example.doan.Validator.annotation;
+package com.example.doan.Validator.annotation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
-import tranminhduc.demo.Validator.ValidUsernameValidator;
+import com.example.doan.Validator.ValidUsernameValidator;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
@@ -18,4 +18,4 @@ public @interface ValidUsername {
     String message() default "Username already exists";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
-}*/
+}

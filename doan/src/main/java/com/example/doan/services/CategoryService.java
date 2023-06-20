@@ -2,7 +2,7 @@ package com.example.doan.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.doan.model.Category;
+import com.example.doan.entity.Category;
 import com.example.doan.repository.ICategoryRepository;
 
 import java.util.List;

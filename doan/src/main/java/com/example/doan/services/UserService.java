@@ -1,11 +1,10 @@
-/*
 package com.example.doan.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tranminhduc.demo.entity.User;
-import tranminhduc.demo.repository.IRoleRepository;
-import tranminhduc.demo.repository.IUserRepository;
+import com.example.doan.entity.User;
+import com.example.doan.repository.IRoleRepository;
+import com.example.doan.repository.IUserRepository;
 
 @Service
 public class UserService {
@@ -25,4 +24,3 @@ public class UserService {
         }
     }
 }
-*/

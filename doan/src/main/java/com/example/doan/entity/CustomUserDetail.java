@@ -1,15 +1,15 @@
-/*package com.example.doan.entity;*/
+package com.example.doan.entity;
 
-/*import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import tranminhduc.demo.repository.IUserRepository;
+import com.example.doan.repository.IUserRepository;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.Set;*/
+import java.util.Set;
 
-/*public class CustomUserDetail implements UserDetails {
+public class CustomUserDetail implements UserDetails {
 
     private final User user;
 
@@ -60,4 +60,4 @@ import java.util.Set;*/
     public boolean isEnabled() {
         return true;
     }
-}*/
+}

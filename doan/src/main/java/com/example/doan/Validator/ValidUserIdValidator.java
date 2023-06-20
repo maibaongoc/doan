@@ -1,9 +1,9 @@
-/*package com.example.doan.Validator;
+package com.example.doan.Validator;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import tranminhduc.demo.Validator.annotation.ValidUserId;
-import tranminhduc.demo.entity.User;
+import com.example.doan.Validator.annotation.ValidUserId;
+import com.example.doan.entity.User;
 
 public class ValidUserIdValidator implements ConstraintValidator<ValidUserId, User> {
     @Override
@@ -12,4 +12,4 @@ public class ValidUserIdValidator implements ConstraintValidator<ValidUserId, Us
             return true;
         return user.getId() != null;
     }
-}*/
+}

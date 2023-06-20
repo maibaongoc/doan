@@ -1,4 +1,3 @@
-/*
 package com.example.doan.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,9 +5,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import tranminhduc.demo.entity.CustomUserDetail;
-import tranminhduc.demo.entity.User;
-import tranminhduc.demo.repository.IUserRepository;
+import com.example.doan.entity.CustomUserDetail;
+import com.example.doan.entity.User;
+import com.example.doan.repository.IUserRepository;
 @Service
 
 public class CustomUserDetailService implements UserDetailsService {
@@ -24,4 +23,3 @@ public class CustomUserDetailService implements UserDetailsService {
        return new CustomUserDetail(user, userRepository);
    }
 }
-*/

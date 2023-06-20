@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <th:block th:replace="layout :: link-css"></th:block>
-    <title>Add Book</title>
+<head th:replace="~{layout :: head}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-<th:block th:replace="layout :: header"></th:block>
+<th:block th:replace="~{layout :: header}"></th:block>
 <div class="container">
-    <h1>Add Book</h1>
+    <h1>Add Product</h1>
     <form th:action="@{/products/add}" th:object="${product}" method="post" enctype="multipart/form-data">
         <div class="col-6 mb-3">
             <label class="form-label" for="title">Title:</label>
@@ -39,7 +38,9 @@
     <br>
     <a th:href="@{/products}">Back to List</a>
 </div>
-<th:block th:replace="layout :: footer"></th:block>
+<div th:replace="~{layout :: footer}"></div>
+<div th:replace="~{layout :: js_bundle}">
 
+</div>
 </body>
 </html>
